@@ -1,0 +1,34 @@
+:root {
+  /* Colors */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: rgba(30, 41, 59, 0.7);
+
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  /* Layout */
+  --container-width: 1200px;
+  --section-padding: 6rem;
+
+  /* Animation */
+  --transition: all 0.3s ease;
+}
