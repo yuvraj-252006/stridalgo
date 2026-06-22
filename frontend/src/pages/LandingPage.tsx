@@ -6,6 +6,9 @@ import CityEvolution from "../components/CityEvolution";
 import BossPreview from "../components/BossPreview";
 import LeaderboardPreview from "../components/LeaderboardPreview";
 import Tournament from "../components/Tournament";
+import Stats from "../components/Stats";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
 function LandingPage() {
   return (
     <>
@@ -17,6 +20,9 @@ function LandingPage() {
       <BossPreview />
       <LeaderboardPreview />
       <Tournament />
+      <Stats />
+      <CTA />
+      <Footer />
     </>
   );
 }

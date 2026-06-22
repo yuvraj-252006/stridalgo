@@ -1,0 +1,144 @@
+.stats {
+  text-align: center;
+}
+
+.stats-grid {
+  margin-top: 4rem;
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 2rem;
+}
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 2.5rem 2rem;
+
+  border-radius: 28px;
+
+  background: rgba(30, 41, 59, 0.55);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.stat-card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.03);
+
+  border-color:
+    rgba(59, 130, 246, 0.35);
+
+  box-shadow:
+    0 25px 50px
+    rgba(59, 130, 246, 0.15);
+}
+
+/* Glow */
+
+.stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -100px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.2),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+/* Icon */
+
+.stat-icon {
+  font-size: 3rem;
+
+  margin-bottom: 1.5rem;
+
+  animation:
+    floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Number */
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  margin-bottom: 0.8rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #60a5fa,
+      #a855f7
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Label */
+
+.stat-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .stats-grid {
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 2rem;
+  }
+
+  .stat-card h3 {
+    font-size: 2rem;
+  }
+
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+}
