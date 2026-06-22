@@ -1,0 +1,227 @@
+.boss {
+  text-align: center;
+}
+
+.boss-card {
+  margin-top: 4rem;
+  padding: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background: rgba(30, 41, 59, 0.55);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.boss-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(168, 85, 247, 0.45);
+
+  box-shadow:
+    0 25px 60px
+    rgba(168, 85, 247, 0.2);
+}
+
+/* Purple Glow */
+
+.boss-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  top: -150px;
+  right: -120px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.25),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+/* Boss */
+
+.boss-image {
+  font-size: 8rem;
+  z-index: 2;
+
+  animation:
+    floatBoss 3s ease-in-out infinite;
+}
+
+@keyframes floatBoss {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Content */
+
+.boss-content {
+  flex: 1;
+  text-align: left;
+
+  position: relative;
+  z-index: 2;
+}
+
+.difficulty {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+  padding: 0.55rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(245, 158, 11, 0.15);
+
+  border:
+    1px solid
+    rgba(245, 158, 11, 0.3);
+
+  color: #f59e0b;
+
+  font-weight: 600;
+}
+
+.boss-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.boss-content p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+
+  margin-bottom: 2rem;
+}
+
+/* Rewards */
+
+.rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.rewards div {
+  padding: 0.8rem 1.1rem;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.rewards div:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(59, 130, 246, 0.35);
+}
+
+/* Button */
+
+.boss-btn {
+  padding: 1rem 2rem;
+
+  border: none;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #2563eb
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.boss-btn:hover {
+  transform:
+    translateY(-4px)
+    scale(1.03);
+
+  box-shadow:
+    0 15px 35px
+    rgba(124, 58, 237, 0.35);
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .boss-card {
+    flex-direction: column;
+    text-align: center;
+
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .boss-content {
+    text-align: center;
+  }
+
+  .rewards {
+    justify-content: center;
+  }
+
+  .boss-image {
+    font-size: 6rem;
+  }
+
+  .boss-content h3 {
+    font-size: 1.7rem;
+  }
+}
