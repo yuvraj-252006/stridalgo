@@ -1,26 +1,64 @@
+import "../styles/features.css";
+
 function Features() {
   return (
-    <section>
-      <h2>Features</h2>
+    <section className="features" id="features">
+      <div className="container">
+        <div className="section-heading">
+          <h2>Why StridAlgo?</h2>
 
-      <div>
-        <h3>⚔️ Solve DSA Problems</h3>
-        <p>Practice coding challenges from easy to hard.</p>
-      </div>
+          <p>
+            More than coding practice.
+            Build your kingdom while
+            mastering algorithms.
+          </p>
+        </div>
 
-      <div>
-        <h3>🏙️ Build Your City</h3>
-        <p>Every solved problem adds new floors and expands your kingdom.</p>
-      </div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">⚔️</div>
 
-      <div>
-        <h3>🏆 Earn Rewards</h3>
-        <p>Gain XP, medals, coins, and unlock achievements.</p>
-      </div>
+            <h3>Solve Challenges</h3>
 
-      <div>
-        <h3>🌍 Compete Globally</h3>
-        <p>Participate in tournaments and climb the leaderboard.</p>
+            <p>
+              Practice random DSA questions across
+              Easy, Medium and Hard difficulties.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">🏙️</div>
+
+            <h3>Build Your City</h3>
+
+            <p>
+              Every solved problem adds new floors
+              and expands your kingdom.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">🏆</div>
+
+            <h3>Earn Rewards</h3>
+
+            <p>
+              Gain XP, coins, medals and unlock
+              achievements.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">🌍</div>
+
+            <h3>Compete Globally</h3>
+
+            <p>
+              Join tournaments, climb leaderboards
+              and become legendary.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
