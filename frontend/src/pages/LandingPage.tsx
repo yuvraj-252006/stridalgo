@@ -1,7 +1,8 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
-import Footer from "../components/Footer";
+import Timeline from "../components/Timeline";
+import CityEvolution from "../components/CityEvolution";
 
 function LandingPage() {
   return (
@@ -9,7 +10,8 @@ function LandingPage() {
       <Navbar />
       <Hero />
       <Features />
-      <Footer />
+      <Timeline />
+      <CityEvolution />
     </>
   );
 }
